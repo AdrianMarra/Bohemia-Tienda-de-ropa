@@ -1,0 +1,794 @@
+* {
+  margin: 0;
+}
+
+header {
+  background-image: "https://img.freepik.com/foto-gratis/pared-ladrillo-pastel_53876-88707.jpg?w=1060&t=st=1659217258~exp=1659217858~hmac=7689ee7948e6f732f0f13fda042f24cc79bb6bffe0b7d3d4b14fa11ad07bd35a" width "100%";
+}
+
+.grilla {
+  display: grid;
+  grid-template-areas: "cabecera cabecera cabecera" "aside aside aside" "seccion cards cards" "footer footer footer";
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 15px;
+  grid-template-rows: 50px 567px 500px 50px;
+  grid-template-columns: 22% auto 15%;
+}
+
+.cabecera {
+  grid-area: cabecera;
+}
+
+.seccion {
+  grid-area: seccion;
+}
+
+.cards {
+  grid-area: cards;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(250, 2, 192);
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .grilla {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "cabecera cabecera cabecera" "seccion seccion aside" "footer footer footer";
+  }
+  #grillaCalza {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "cabeceraCalza cabeceraCalza cabeceraCalza" "seccionCalza seccionCalza seccionCalza" "footerCalza footerCalza footerCalza";
+  }
+  #grillaRemera {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "cabeceraRemeras cabeceraRemeras cabeceraRemeras" "seccionRemeras seccionRemeras seccionRemeras" "footerRemeras footerRemeras footerRemeras";
+  }
+  #grillaTops {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "cabeceraTops cabeceraTops" "seccionTops seccionTops" "footerTops footerTos";
+  }
+}
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .grilla {
+    grid-template-columns: 1fr;
+    grid-template-areas: "cabecera cabecera cabecera" "seccion seccion seccion" "aside aside aside" "footer footer footer";
+  }
+  #grillaCalza {
+    grid-template-columns: 1fr;
+    grid-template-areas: "cabeceraCalza " "seccionCalza " "footerCalza ";
+  }
+  #grillaRemera {
+    grid-template-columns: 1fr;
+    grid-template-areas: "cabeceraRemeras" "seccionRemeras" "footerRemeras";
+  }
+  #grillaTops {
+    grid-template-columns: 1fr;
+    grid-template-areas: "cabeceraTops" "seccionTops" "footerTops";
+  }
+}
+#grillaCalza {
+  display: grid;
+  grid-template-areas: "cabeceraCalza" "seccionCalza" "calzaCars" "footerCalza";
+  row-gap: 15px;
+  grid-template-rows: 6, 9% 57% 57% 10%;
+}
+
+.calzaCars {
+  grid-area: calzaCars;
+}
+
+.cabeceraCalza {
+  grid-area: cabeceraCalza;
+}
+
+.seccionCalza {
+  grid-area: seccionCalza;
+}
+
+.footerCalza {
+  grid-area: footerCalza;
+}
+
+.footerCalza {
+  background-color: rgb(250, 2, 192);
+  text-align: center;
+}
+
+#grillaRemera {
+  display: grid;
+  grid-template-areas: "cabeceraRemeras" "seccionRemeras" "remerasCars" "footerRemeras";
+  row-gap: 15px;
+  grid-template-rows: 6, 9% 56% 10%;
+}
+
+.remerasCars {
+  grid-area: remeraCars;
+}
+
+.cabeceraRemeras {
+  grid-area: cabeceraRemeras;
+}
+
+.seccionRemeras {
+  grid-area: seccionRemeras;
+}
+
+.footerRemeras {
+  grid-area: footerRemeras;
+}
+
+.footerRemeras {
+  background-color: rgb(250, 2, 192);
+  text-align: center;
+}
+
+.cabeceraRemeras,
+.seccionRemeras,
+.footerRemeras {
+  border: 1px solid rgb(1, 1, 1);
+}
+
+#grillaTops {
+  display: grid;
+  grid-template-areas: "cabeceraTops" "seccionTops" "topsCars" "footerTops";
+  row-gap: 15px;
+  grid-template-rows: 6, 9% 57% 10%;
+}
+
+.topsCars {
+  grid-area: topsCars;
+}
+
+.cabeceraTops {
+  grid-area: cabeceraTops;
+}
+
+.seccionTops {
+  grid-area: seccionTops;
+}
+
+.footerTops {
+  grid-area: footerTops;
+}
+
+.footerTops {
+  background-color: rgb(250, 2, 192);
+  text-align: center;
+}
+
+.cabeceraTops,
+.seccionTops,
+.footerTops {
+  border: 1px solid rgb(1, 1, 1);
+}
+
+.cabecera_titulo {
+  background-color: rgb(241, 71, 156);
+  text-align: center;
+  border: 2px solid black;
+}
+
+.cabecera_nav {
+  background-color: rgb(241, 138, 193);
+}
+
+.cabecera_nav_links a:hover {
+  color: rgb(123, 252, 252);
+}
+
+.cabecera_nav_links {
+  list-style-type: none;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.cabecera_nav_links li a {
+  color: rgb(1, 6, 11);
+  margin: 20px;
+  font-family: "Comic Sans MS";
+  font-weight: bolder;
+  font-size: 17px;
+  background-color: rgb(252, 176, 233);
+  border-radius: 5px;
+  border-bottom: 3px solid rgba(230, 136, 152, 0.826);
+  text-decoration: none;
+}
+
+.cabecera_nav_links li {
+  display: inline-block;
+}
+
+.cabecera_nav_links li ul {
+  display: none;
+  position: absolute;
+}
+
+.cabecera_nav_links :hover > ul {
+  display: block;
+}
+
+.cabecera_nav_links li ul li {
+  display: block;
+  position: relative;
+}
+
+body {
+  background-image: url("https://img.freepik.com/foto-gratis/pared-ladrillo-pastel_53876-88707.jpg?w=900&t=st=1659481243~exp=1659481843~hmac=16db05505d53355d29412723304c83b8d326feb88832f972bf751c294d4a3188");
+}
+
+.seccion ul li {
+  display: flex;
+  position: relative;
+  height: 60px;
+  width: 60px;
+  margin-bottom: 45px;
+}
+
+.cabeceraCalza_titulo {
+  background-color: rgb(241, 71, 156);
+  text-align: center;
+  border: 2px solid black;
+  font-family: "comic Sans MS";
+}
+
+.cabeceraCalza_nav ul li {
+  display: inline;
+}
+
+.cabeceraCalza_nav a:hover {
+  color: rgb(123, 252, 252);
+}
+
+.cabeceraCalza_nav ul li {
+  list-style-type: none;
+  color: rgb(1, 6, 11);
+  margin: 20px;
+  font-family: "Comic Sans MS";
+  font-weight: bolder;
+  font-size: 17px;
+  background-color: rgb(252, 176, 233);
+  border-radius: 5px;
+  border-bottom: 3px solid rgba(230, 136, 152, 0.826);
+}
+
+.cabeceraCalza_nav {
+  background-color: rgb(241, 138, 193);
+}
+
+.cabeceraCalza_nav a {
+  text-decoration: none;
+}
+
+.seccionCalza_fotos {
+  background-color: rgb(241, 71, 156);
+  text-align: center;
+  border: 2px solid black;
+}
+
+.seccionCalza ul li {
+  display: inline;
+}
+
+.seccionCalza_fotos {
+  list-style-type: none;
+  color: rgb(1, 6, 11);
+  font-family: "Comic Sans MS";
+  font-weight: bolder;
+  font-size: 17px;
+}
+
+.seccionCalza ul li {
+  margin: 20px;
+}
+
+.cabeceraRemeras_titulo {
+  background-color: rgb(241, 71, 156);
+  text-align: center;
+  border: 2px solid black;
+  font-family: "comic Sans MS";
+}
+
+.cabeceraRemeras_nav ul li {
+  display: inline;
+}
+
+.cabeceraRemeras_nav a:hover {
+  color: rgb(123, 252, 252);
+}
+
+.cabeceraRemeras_nav ul li {
+  list-style-type: none;
+  color: rgb(1, 6, 11);
+  margin: 20px;
+  font-family: "Comic Sans MS";
+  font-weight: bolder;
+  font-size: 17px;
+  background-color: rgb(252, 176, 233);
+  border-radius: 5px;
+  border-bottom: 3px solid rgba(230, 136, 152, 0.826);
+}
+
+.cabeceraRemeras_nav {
+  background-color: rgb(241, 138, 193);
+}
+
+.cabeceraRemeras_nav a {
+  text-decoration: none;
+}
+
+.seccionRemeras_fotos {
+  background-color: rgb(241, 71, 156);
+  text-align: center;
+  border: 2px solid black;
+}
+
+.seccionRemeras ul li {
+  display: inline;
+}
+
+.seccionRemeras_fotos {
+  list-style-type: none;
+  color: rgb(1, 6, 11);
+  font-family: "Comic Sans MS";
+  font-weight: bolder;
+  font-size: 17px;
+}
+
+.seccionRemeras ul li {
+  margin: 20px;
+}
+
+.cabeceraTops_titulo {
+  background-color: rgb(241, 71, 156);
+  text-align: center;
+  border: 2px solid black;
+  font-family: "comic Sans MS";
+}
+
+.cabeceraTops_nav ul li {
+  display: inline;
+}
+
+.cabeceraTops_nav a:hover {
+  color: rgb(123, 252, 252);
+}
+
+.cabeceraTops_nav ul li {
+  list-style-type: none;
+  color: rgb(1, 6, 11);
+  margin: 20px;
+  font-family: "Comic Sans MS";
+  font-weight: bolder;
+  font-size: 17px;
+  background-color: rgb(252, 176, 233);
+  border-radius: 5px;
+  border-bottom: 3px solid rgba(230, 136, 152, 0.826);
+}
+
+.cabeceraTops_nav {
+  background-color: rgb(241, 138, 193);
+}
+
+.cabeceraTops_nav a {
+  text-decoration: none;
+}
+
+.seccionTops_fotos {
+  background-color: rgb(241, 71, 156);
+  text-align: center;
+  border: 2px solid black;
+}
+
+.seccionTops ul li {
+  display: inline;
+}
+
+.seccionTops_fotos {
+  list-style-type: none;
+  color: rgb(1, 6, 11);
+  font-family: "Comic Sans MS";
+  font-weight: bolder;
+  font-size: 17px;
+}
+
+.seccionTops ul li {
+  margin: 20px;
+}
+
+.cabeceraCompras_titulo {
+  background-color: rgb(241, 71, 156);
+  text-align: center;
+  border: 2px solid black;
+  font-family: "comic Sans MS";
+}
+
+.cabeceraCompras_nav ul li {
+  list-style-type: none;
+  color: rgb(1, 6, 11);
+  margin: 20px;
+  font-family: "Comic Sans MS";
+  font-weight: bolder;
+  font-size: 17px;
+  background-color: rgb(252, 176, 233);
+  border-radius: 5px;
+  border-bottom: 3px solid rgba(230, 136, 152, 0.826);
+  display: inline;
+}
+
+.cabeceraCompras_nav a:hover {
+  color: rgb(123, 252, 252);
+}
+
+p {
+  list-style-type: none;
+  color: rgb(1, 6, 11);
+  margin: 20px;
+  font-family: "Comic Sans MS";
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.envio_titulo {
+  background-color: rgb(241, 71, 156);
+  text-align: center;
+  border: 2px solid black;
+  font-family: "comic Sans MS";
+}
+
+.envio_nav ul li {
+  list-style-type: none;
+  color: rgb(1, 6, 11);
+  margin: 20px;
+  font-family: "Comic Sans MS";
+  font-weight: bolder;
+  font-size: 17px;
+  background-color: rgb(252, 176, 233);
+  border-radius: 5px;
+  border-bottom: 3px solid rgba(230, 136, 152, 0.826);
+  display: inline;
+}
+
+.envio_nav a:hover {
+  color: rgb(123, 252, 252);
+}
+
+.envio_formulario {
+  list-style-type: none;
+  color: rgb(1, 6, 11);
+  margin: 20px;
+  font-family: "Comic Sans MS";
+  font-weight: bolder;
+  font-size: 25px;
+  text-align: center;
+}
+
+.comunicacion_texto {
+  background-color: rgb(241, 71, 156);
+  text-align: center;
+  border: 2px solid black;
+  font-family: "comic Sans MS";
+}
+
+.comunicacion_nav ul li {
+  list-style-type: none;
+  color: rgb(1, 6, 11);
+  margin: 20px;
+  font-family: "Comic Sans MS";
+  font-weight: bolder;
+  font-size: 17px;
+  background-color: rgb(252, 176, 233);
+  border-radius: 5px;
+  border-bottom: 3px solid rgba(230, 136, 152, 0.826);
+  display: inline;
+}
+
+.comunicacion_nav a:hover {
+  color: rgb(123, 252, 252);
+}
+
+.comunicacion_info {
+  list-style-type: none;
+  color: rgb(1, 6, 11);
+  margin: 20px;
+  font-family: "Comic Sans MS";
+  font-weight: bolder;
+  font-size: 30px;
+  text-align: center;
+}
+
+.info_titulo {
+  background-color: rgb(241, 71, 156);
+  text-align: center;
+  border: 2px solid black;
+  font-family: "comic Sans MS";
+}
+
+.info_link ul li {
+  list-style-type: none;
+  color: rgb(1, 6, 11);
+  margin: 20px;
+  font-family: "Comic Sans MS";
+  font-weight: bolder;
+  font-size: 17px;
+  background-color: rgb(252, 176, 233);
+  border-radius: 5px;
+  border-bottom: 3px solid rgba(230, 136, 152, 0.826);
+  display: inline;
+}
+
+.info_link a:hover {
+  color: rgb(123, 252, 252);
+}
+
+.aside_titulo {
+  font-family: "Comic Sans MS";
+  text-align: center;
+}
+
+.aside {
+  width: 50%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.aside ul {
+  display: flex;
+  padding: 0;
+  width: 300%;
+  -webkit-animation-name: imagenesProductos;
+          animation-name: imagenesProductos;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.aside li {
+  width: 100%;
+  list-style: none;
+}
+
+.aside img {
+  width: 100%;
+}
+
+.aside :hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes imagenesProductos {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200;
+  }
+  70% {
+    margin-left: -200%;
+  }
+}
+
+@keyframes imagenesProductos {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200;
+  }
+  70% {
+    margin-left: -200%;
+  }
+}
+.aside_titulo {
+  -webkit-animation-name: titulo;
+          animation-name: titulo;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  font-family: "Comic Sans MS";
+}
+
+@-webkit-keyframes titulo {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    background-color: rgb(249, 38, 150);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes titulo {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    background-color: rgb(249, 38, 150);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.seccionRemeras ul li :hover {
+  width: 450px;
+  height: 450px;
+}
+
+.seccionCalza img:hover {
+  width: 450px;
+  height: 450px;
+}
+
+.seccionTops ul li :hover {
+  width: 450px;
+  height: 450px;
+}
+
+.cabeceraTops_titulo {
+  -webkit-animation-name: tituloTops;
+          animation-name: tituloTops;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes tituloTops {
+  0% {
+    background-color: rgb(253, 193, 120);
+  }
+  25% {
+    background-color: rgb(253, 161, 230);
+  }
+  50% {
+    background-color: rgb(249, 38, 150);
+  }
+  75% {
+    background-color: rgb(224, 140, 186);
+  }
+  100% {
+    background-color: rgb(240, 185, 153);
+  }
+}
+
+@keyframes tituloTops {
+  0% {
+    background-color: rgb(253, 193, 120);
+  }
+  25% {
+    background-color: rgb(253, 161, 230);
+  }
+  50% {
+    background-color: rgb(249, 38, 150);
+  }
+  75% {
+    background-color: rgb(224, 140, 186);
+  }
+  100% {
+    background-color: rgb(240, 185, 153);
+  }
+}
+.cabeceraCalza_titulo {
+  -webkit-animation-name: tituloCalza;
+          animation-name: tituloCalza;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes tituloCalza {
+  0% {
+    background-color: rgb(253, 193, 120);
+  }
+  25% {
+    background-color: rgb(253, 161, 230);
+  }
+  50% {
+    background-color: rgb(249, 38, 150);
+  }
+  75% {
+    background-color: rgb(224, 140, 186);
+  }
+  100% {
+    background-color: rgb(240, 185, 153);
+  }
+}
+
+@keyframes tituloCalza {
+  0% {
+    background-color: rgb(253, 193, 120);
+  }
+  25% {
+    background-color: rgb(253, 161, 230);
+  }
+  50% {
+    background-color: rgb(249, 38, 150);
+  }
+  75% {
+    background-color: rgb(224, 140, 186);
+  }
+  100% {
+    background-color: rgb(240, 185, 153);
+  }
+}
+.cabeceraRemeras_titulo {
+  -webkit-animation-name: tituloRemera;
+          animation-name: tituloRemera;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes tituloRemera {
+  0% {
+    background-color: rgb(253, 193, 120);
+  }
+  25% {
+    background-color: rgb(253, 161, 230);
+  }
+  50% {
+    background-color: rgb(249, 38, 150);
+  }
+  75% {
+    background-color: rgb(224, 140, 186);
+  }
+  100% {
+    background-color: rgb(240, 185, 153);
+  }
+}
+
+@keyframes tituloRemera {
+  0% {
+    background-color: rgb(253, 193, 120);
+  }
+  25% {
+    background-color: rgb(253, 161, 230);
+  }
+  50% {
+    background-color: rgb(249, 38, 150);
+  }
+  75% {
+    background-color: rgb(224, 140, 186);
+  }
+  100% {
+    background-color: rgb(240, 185, 153);
+  }
+}/*# sourceMappingURL=styles.css.map */
