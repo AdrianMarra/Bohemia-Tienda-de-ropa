@@ -239,45 +239,34 @@
 .cabecera_nav {
     background-color: rgb(241, 138, 193);
 }
-
-.cabecera_nav_links a:hover {
-    color: rgb(123, 252, 252);
-}
-
-.cabecera_nav_links {
-    list-style-type: none;
-    border: 02px solid black;
-    text-align: center;
-}
-
-.cabecera_nav_links li a {
-    color: rgb(1, 6, 11);
-    margin: 20px;
-    font-family: "Comic Sans MS";
-    font-weight: bolder;
-    font-size: 17px;
-    background-color: rgb(252, 176, 233);
-    border-radius: 05px;
-    border-bottom: 03px solid rgba(230, 136, 152, 0.826);
-    text-decoration: none;
-}
-
-.cabecera_nav_links li {
-    display: inline-block;
-}
-
-.cabecera_nav_links li ul {
-    display: none;
-    position: absolute;
-}
-
 .cabecera_nav_links :hover>ul {
     display: block;
 }
 
-.cabecera_nav_links li ul li {
-    display: block;
-    position: relative;
+.cabecera_nav_links{
+    a:hover {color: rgb(123, 252, 252);}
+    list-style-type: none;
+    border: 02px solid black;
+    text-align: center;
+    li{
+        a {color: rgb(1, 6, 11);
+            margin: 20px;
+            font-family: "Comic Sans MS";
+            font-weight: bolder;
+            font-size: 17px;
+            background-color: rgb(252, 176, 233);
+            border-radius: 05px;
+            border-bottom: 03px solid rgba(230, 136, 152, 0.826);
+            text-decoration: none;}
+        display: inline-block;
+         ul{display: none;
+            position: absolute;
+            li {
+            display: block;
+            position: relative;
+            }
+         }
+    } 
 }
 
 body {
@@ -298,33 +287,24 @@ body {
     border: 02px solid black;
     font-family: "comic Sans MS";
 }
-
-.cabeceraCalza_nav ul li {
-    display: inline;
-}
-
-.cabeceraCalza_nav a:hover {
-    color: rgb(123, 252, 252);
-}
-
-.cabeceraCalza_nav ul li {
-    list-style-type: none;
-    color: rgb(1, 6, 11);
-    margin: 20px;
-    font-family: "Comic Sans MS";
-    font-weight: bolder;
-    font-size: 17px;
-    background-color: rgb(252, 176, 233);
-    border-radius: 05px;
-    border-bottom: 03px solid rgba(230, 136, 152, 0.826);
-}
-
 .cabeceraCalza_nav {
+    a:hover {color: rgb(123, 252, 252);}
     background-color: rgb(241, 138, 193);
-}
-
-.cabeceraCalza_nav a {
-    text-decoration: none;
+    a {text-decoration: none;}
+    ul {
+        li {
+        list-style-type: none;
+        color: rgb(1, 6, 11);
+        margin: 20px;
+        font-family: "Comic Sans MS";
+        font-weight: bolder;
+        font-size: 17px;
+        background-color: rgb(252, 176, 233);
+        border-radius: 05px;
+        border-bottom: 03px solid rgba(230, 136, 152, 0.826);
+        }
+        li {display: inline;}
+    }
 }
 
 .seccionCalza_fotos {
@@ -333,8 +313,14 @@ body {
     border: 02px solid black;
 }
 
-.seccionCalza ul li {
-    display: inline;
+.seccionCalza{ 
+    ul{ 
+        li {
+        display: inline;
+        }
+        li {margin: 20px; 
+        }
+    }
 }
 
 .seccionCalza_fotos {
@@ -344,114 +330,73 @@ body {
     font-weight: bolder;
     font-size: 17px;
 }
-
-.seccionCalza ul li {
-    margin: 20px;
-}
-
 .cabeceraRemeras_titulo {
     background-color: rgb(241, 71, 156);
     text-align: center;
     border: 02px solid black;
     font-family: "comic Sans MS";
 }
-
-.cabeceraRemeras_nav ul li {
-    display: inline;
-}
-
-.cabeceraRemeras_nav a:hover {
-    color: rgb(123, 252, 252);
-}
-
-.cabeceraRemeras_nav ul li {
-    list-style-type: none;
-    color: rgb(1, 6, 11);
-    margin: 20px;
-    font-family: "Comic Sans MS";
-    font-weight: bolder;
-    font-size: 17px;
-    background-color: rgb(252, 176, 233);
-    border-radius: 05px;
-    border-bottom: 03px solid rgba(230, 136, 152, 0.826);
-}
-
 .cabeceraRemeras_nav {
+    a:hover {color: rgb(123, 252, 252);}
     background-color: rgb(241, 138, 193);
+    a {text-decoration: none;}
+    ul{
+        li {
+        list-style-type: none;
+        color: rgb(1, 6, 11);
+        margin: 20px;
+        font-family: "Comic Sans MS";
+        font-weight: bolder;
+        font-size: 17px;
+        background-color: rgb(252, 176, 233);
+        border-radius: 05px;
+        border-bottom: 03px solid rgba(230, 136, 152, 0.826);
+        }
+        li {display: inline; 
+        }
+    }
 }
-
-.cabeceraRemeras_nav a {
-    text-decoration: none;
-}
-
 .seccionRemeras_fotos {
     background-color: rgb(241, 71, 156);
     text-align: center;
-    border: 02px solid black;
-}
-
-.seccionRemeras ul li {
-    display: inline;
-}
-
-.seccionRemeras_fotos {
     list-style-type: none;
-    color: rgb(1, 6, 11);
     font-family: "Comic Sans MS";
-    font-weight: bolder;
     font-size: 17px;
 }
-
-.seccionRemeras ul li {
-    margin: 20px;
-}
-
 .cabeceraTops_titulo {
     background-color: rgb(241, 71, 156);
     text-align: center;
     border: 02px solid black;
     font-family: "comic Sans MS";
 }
-
-.cabeceraTops_nav ul li {
-    display: inline;
-}
-
 .cabeceraTops_nav a:hover {
     color: rgb(123, 252, 252);
 }
-
-.cabeceraTops_nav ul li {
-    list-style-type: none;
-    color: rgb(1, 6, 11);
-    margin: 20px;
-    font-family: "Comic Sans MS";
-    font-weight: bolder;
-    font-size: 17px;
-    background-color: rgb(252, 176, 233);
-    border-radius: 05px;
-    border-bottom: 03px solid rgba(230, 136, 152, 0.826);
-}
-
 .cabeceraTops_nav {
     background-color: rgb(241, 138, 193);
+    a {text-decoration: none;}
+    ul {
+        li {
+        list-style-type: none;
+        color: rgb(1, 6, 11);
+        margin: 20px;
+        font-family: "Comic Sans MS";
+        font-weight: bolder;
+        font-size: 17px;
+        background-color: rgb(252, 176, 233);
+        border-radius: 05px;
+        border-bottom: 03px solid rgba(230, 136, 152, 0.826);
+        }
+        li {display: inline;
+        }
+    }
 }
-
-.cabeceraTops_nav a {
-    text-decoration: none;
-}
-
 .seccionTops_fotos {
     background-color: rgb(241, 71, 156);
     text-align: center;
     border: 02px solid black;
 
 }
-
-.seccionTops ul li {
-    display: inline;
-}
-
 .seccionTops_fotos {
     list-style-type: none;
     color: rgb(1, 6, 11);
@@ -459,11 +404,6 @@ body {
     font-weight: bolder;
     font-size: 17px;
 }
-
-.seccionTops ul li {
-    margin: 20px;
-}
-
 .cabeceraCompras_titulo {
     background-color: rgb(241, 71, 156);
     text-align: center;
@@ -471,17 +411,21 @@ body {
     font-family: "comic Sans MS";
 }
 
-.cabeceraCompras_nav ul li {
-    list-style-type: none;
-    color: rgb(1, 6, 11);
-    margin: 20px;
-    font-family: "Comic Sans MS";
-    font-weight: bolder;
-    font-size: 17px;
-    background-color: rgb(252, 176, 233);
-    border-radius: 05px;
-    border-bottom: 03px solid rgba(230, 136, 152, 0.826);
-    display: inline;
+.cabeceraCompras_nav {
+    ul {
+        li {
+        list-style-type: none;
+        color: rgb(1, 6, 11);
+        margin: 20px;
+        font-family: "Comic Sans MS";
+        font-weight: bolder;
+        font-size: 17px;
+        background-color: rgb(252, 176, 233);
+        border-radius: 05px;
+        border-bottom: 03px solid rgba(230, 136, 152, 0.826);
+        display: inline;
+        }
+    }
 }
 
 .cabeceraCompras_nav a:hover {
@@ -504,17 +448,21 @@ p {
     font-family: "comic Sans MS";
 }
 
-.envio_nav ul li {
-    list-style-type: none;
-    color: rgb(1, 6, 11);
-    margin: 20px;
-    font-family: "Comic Sans MS";
-    font-weight: bolder;
-    font-size: 17px;
-    background-color: rgb(252, 176, 233);
-    border-radius: 05px;
-    border-bottom: 03px solid rgba(230, 136, 152, 0.826);
-    display: inline;
+.envio_nav {
+    ul {
+        li {
+        list-style-type: none;
+        color: rgb(1, 6, 11);
+        margin: 20px;
+        font-family: "Comic Sans MS";
+        font-weight: bolder;
+        font-size: 17px;
+        background-color: rgb(252, 176, 233);
+        border-radius: 05px;
+        border-bottom: 03px solid rgba(230, 136, 152, 0.826);
+        display: inline;
+        }
+    }
 }
 
 .envio_nav a:hover {
@@ -539,17 +487,21 @@ p {
     font-family: "comic Sans MS";
 }
 
-.comunicacion_nav ul li {
-    list-style-type: none;
-    color: rgb(1, 6, 11);
-    margin: 20px;
-    font-family: "Comic Sans MS";
-    font-weight: bolder;
-    font-size: 17px;
-    background-color: rgb(252, 176, 233);
-    border-radius: 05px;
-    border-bottom: 03px solid rgba(230, 136, 152, 0.826);
-    display: inline;
+.comunicacion_nav{ 
+    ul{
+     li {
+        list-style-type: none;
+        color: rgb(1, 6, 11);
+        margin: 20px;
+        font-family: "Comic Sans MS";
+        font-weight: bolder;
+        font-size: 17px;
+        background-color: rgb(252, 176, 233);
+        border-radius: 05px;
+        border-bottom: 03px solid rgba(230, 136, 152, 0.826);
+        display: inline;
+        }
+    }
 }
 
 .comunicacion_nav a:hover {
@@ -573,17 +525,21 @@ p {
     font-family: "comic Sans MS";
 }
 
-.info_link ul li {
-    list-style-type: none;
-    color: rgb(1, 6, 11);
-    margin: 20px;
-    font-family: "Comic Sans MS";
-    font-weight: bolder;
-    font-size: 17px;
-    background-color: rgb(252, 176, 233);
-    border-radius: 05px;
-    border-bottom: 03px solid rgba(230, 136, 152, 0.826);
-    display: inline;
+.info_link{ 
+    ul{ 
+        li {
+        list-style-type: none;
+        color: rgb(1, 6, 11);
+        margin: 20px;
+        font-family: "Comic Sans MS";
+        font-weight: bolder;
+        font-size: 17px;
+        background-color: rgb(252, 176, 233);
+        border-radius: 05px;
+        border-bottom: 03px solid rgba(230, 136, 152, 0.826);
+        display: inline;
+        }
+    } 
 }
 
 .info_link a:hover {
@@ -591,34 +547,29 @@ p {
 }
 
 .aside_titulo {
-    font-family: "Comic Sans MS";
-    text-align: center;
-}
-
-.aside {
-    width: 50%;
-    margin: auto;
-    overflow: hidden;
-
-}
-
-.aside ul {
-    display: flex;
-    padding: 0;
-    width: 300%;
-    animation-name: imagenesProductos;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-}
-
-.aside li {
-    width: 100%;
-    list-style: none;
-}
-
-.aside img {
-    width: 100%;
-}
+        font-family: "Comic Sans MS";
+        text-align: center;
+        .aside {
+                width: 50%;
+                margin: auto;
+                overflow: hidden;
+                 ul {
+                    display: flex;
+                    padding: 0;
+                    width: 300%;
+                    animation-name: imagenesProductos;
+                    animation-duration: 20s;
+                    animation-iteration-count: infinite;
+                    li {
+                        width: 100%;
+                        list-style: none;
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
 
 .aside :hover {
     animation-play-state: paused;
