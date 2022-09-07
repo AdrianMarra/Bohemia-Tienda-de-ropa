@@ -37,7 +37,7 @@
 
 .footer {
     grid-area: footer;
-    background-color: rgb(250, 2, 192);
+    background-color: map-get($colores,colorChicle );
     text-align: center;
 
 }
@@ -53,8 +53,7 @@
     }
 
     #grillaCalza {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        @include gridTemplatePro;
         grid-template-areas:
             "cabeceraCalza cabeceraCalza cabeceraCalza"
             "seccionCalza seccionCalza seccionCalza"
@@ -62,8 +61,7 @@
     }
 
     #grillaRemera {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        @include gridTemplatePro;
         grid-template-areas:
             "cabeceraRemeras cabeceraRemeras cabeceraRemeras"
             "seccionRemeras seccionRemeras seccionRemeras"
@@ -72,8 +70,7 @@
     }
 
     #grillaTops {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        @include gridTemplatePro;
         grid-template-areas:
             "cabeceraTops cabeceraTops"
             "seccionTops seccionTops"
@@ -123,14 +120,12 @@
 }
 
 #grillaCalza {
-    display: grid;
+    @extend %grillaProductos;
     grid-template-areas:
         "cabeceraCalza"
         "seccionCalza"
         "calzaCars"
         "footerCalza";
-    row-gap: 15px;
-    grid-template-rows: 6, 9% 57% 57% 10%;
 }
 
 .calzaCars {
@@ -150,19 +145,17 @@
 }
 
 .footerCalza {
-    background-color: rgb(250, 2, 192);
+    background-color: map-get($colores,colorNegro );
     text-align: center;
 }
 
 #grillaRemera {
-    display: grid;
+    @extend %grrillaProducto;
     grid-template-areas:
         "cabeceraRemeras"
         "seccionRemeras"
         "remerasCars"
         "footerRemeras";
-    row-gap: 15px;
-    grid-template-rows: 6, 9% 56% 10%;
 }
 
 .remerasCars {
@@ -182,25 +175,23 @@
 }
 
 .footerRemeras {
-    background-color: rgb(250, 2, 192);
+    background-color: map-get($colores,colorChicle);
     text-align: center;
 }
 
 .cabeceraRemeras,
 .seccionRemeras,
 .footerRemeras {
-    border: 1px solid rgb(1, 1, 1);
+    border: 1px solid map-get($colores,colorNegro);
 }
 
 #grillaTops {
-    display: grid;
+    @extend %grillaProductos;
     grid-template-areas:
         "cabeceraTops"
         "seccionTops"
         "topsCars"
         "footerTops";
-    row-gap: 15px;
-    grid-template-rows: 6, 9% 57% 10%;
 }
 
 .topsCars {
@@ -220,20 +211,20 @@
 }
 
 .footerTops {
-    background-color: rgb(250, 2, 192);
+    background-color: map-get($colores,colorChicle );
     text-align: center;
 }
 
 .cabeceraTops,
 .seccionTops,
 .footerTops {
-    border: 1px solid rgb(1, 1, 1);
+    border: 1px solid map-get($colores,colorNegro);
 }
 
 .cabecera_titulo {
     background-color: rgb(241, 71, 156);
     text-align: center;
-    border: 02px solid black;
+    border: 02px solid map-get($colores,colorNegro;
 }
 
 .cabecera_nav {
@@ -249,11 +240,11 @@
     border: 02px solid black;
     text-align: center;
     li{
-        a {color: rgb(1, 6, 11);
+        a {color: map-get($colores,colorNegro );
             margin: 20px;
-            font-family: "Comic Sans MS";
+            font-family: map-get($colores,letra );
             font-weight: bolder;
-            font-size: 17px;
+            font-size: map-get($colores,tamañoLetra);
             background-color: rgb(252, 176, 233);
             border-radius: 05px;
             border-bottom: 03px solid rgba(230, 136, 152, 0.826);
@@ -282,35 +273,14 @@ body {
 }
 
 .cabeceraCalza_titulo {
-    background-color: rgb(241, 71, 156);
-    text-align: center;
-    border: 02px solid black;
-    font-family: "comic Sans MS";
+    @extend %titulos;
 }
-.cabeceraCalza_nav {
-    a:hover {color: rgb(123, 252, 252);}
-    background-color: rgb(241, 138, 193);
-    a {text-decoration: none;}
-    ul {
-        li {
-        list-style-type: none;
-        color: rgb(1, 6, 11);
-        margin: 20px;
-        font-family: "Comic Sans MS";
-        font-weight: bolder;
-        font-size: 17px;
-        background-color: rgb(252, 176, 233);
-        border-radius: 05px;
-        border-bottom: 03px solid rgba(230, 136, 152, 0.826);
-        }
-        li {display: inline;}
-    }
+.cabeceraCalza_nav{
+    @extend %productosNav;
 }
 
 .seccionCalza_fotos {
-    background-color: rgb(241, 71, 156);
-    text-align: center;
-    border: 02px solid black;
+    @include seccionProductosFotos($color:rgb(241, 71, 156) )
 }
 
 .seccionCalza{ 
@@ -324,156 +294,60 @@ body {
 }
 
 .seccionCalza_fotos {
-    list-style-type: none;
-    color: rgb(1, 6, 11);
-    font-family: "Comic Sans MS";
-    font-weight: bolder;
-    font-size: 17px;
+    @extend %seccionFotosProductos;
 }
 .cabeceraRemeras_titulo {
-    background-color: rgb(241, 71, 156);
-    text-align: center;
-    border: 02px solid black;
-    font-family: "comic Sans MS";
+    @extend %titulo;
 }
 .cabeceraRemeras_nav {
-    a:hover {color: rgb(123, 252, 252);}
-    background-color: rgb(241, 138, 193);
-    a {text-decoration: none;}
-    ul{
-        li {
-        list-style-type: none;
-        color: rgb(1, 6, 11);
-        margin: 20px;
-        font-family: "Comic Sans MS";
-        font-weight: bolder;
-        font-size: 17px;
-        background-color: rgb(252, 176, 233);
-        border-radius: 05px;
-        border-bottom: 03px solid rgba(230, 136, 152, 0.826);
-        }
-        li {display: inline; 
-        }
-    }
+    @extend %productosNav;
 }
 .seccionRemeras_fotos {
-    background-color: rgb(241, 71, 156);
-    text-align: center;
-    list-style-type: none;
-    font-family: "Comic Sans MS";
-    font-size: 17px;
+    @extend %seccionFotosProductos;
 }
 .cabeceraTops_titulo {
-    background-color: rgb(241, 71, 156);
-    text-align: center;
-    border: 02px solid black;
-    font-family: "comic Sans MS";
-}
-.cabeceraTops_nav a:hover {
-    color: rgb(123, 252, 252);
+    @extend %titulos;
 }
 .cabeceraTops_nav {
-    background-color: rgb(241, 138, 193);
-    a {text-decoration: none;}
-    ul {
-        li {
-        list-style-type: none;
-        color: rgb(1, 6, 11);
-        margin: 20px;
-        font-family: "Comic Sans MS";
-        font-weight: bolder;
-        font-size: 17px;
-        background-color: rgb(252, 176, 233);
-        border-radius: 05px;
-        border-bottom: 03px solid rgba(230, 136, 152, 0.826);
-        }
-        li {display: inline;
-        }
-    }
+    @extend %productosNav;
 }
 .seccionTops_fotos {
-    background-color: rgb(241, 71, 156);
-    text-align: center;
-    border: 02px solid black;
+    @include seccionProductosFotos($color: rgb(241, 71, 156))
 
 }
 .seccionTops_fotos {
-    list-style-type: none;
-    color: rgb(1, 6, 11);
-    font-family: "Comic Sans MS";
-    font-weight: bolder;
-    font-size: 17px;
+    @extend %seccionFotosProductos;
 }
 .cabeceraCompras_titulo {
-    background-color: rgb(241, 71, 156);
-    text-align: center;
-    border: 02px solid black;
-    font-family: "comic Sans MS";
+    @extend%titulos;
 }
 
 .cabeceraCompras_nav {
-    ul {
-        li {
-        list-style-type: none;
-        color: rgb(1, 6, 11);
-        margin: 20px;
-        font-family: "Comic Sans MS";
-        font-weight: bolder;
-        font-size: 17px;
-        background-color: rgb(252, 176, 233);
-        border-radius: 05px;
-        border-bottom: 03px solid rgba(230, 136, 152, 0.826);
-        display: inline;
-        }
-    }
-}
-
-.cabeceraCompras_nav a:hover {
-    color: rgb(123, 252, 252);
+    
 }
 
 p {
     list-style-type: none;
-    color: rgb(1, 6, 11);
+    color: map-get($colores,colorNegro);
     margin: 20px;
-    font-family: "Comic Sans MS";
+    font-family: map-get($colores,letra );
     font-weight: bolder;
     font-size: 30px;
 }
 
 .envio_titulo {
-    background-color: rgb(241, 71, 156);
-    text-align: center;
-    border: 02px solid black;
-    font-family: "comic Sans MS";
+   @extend%titulos;
 }
 
 .envio_nav {
-    ul {
-        li {
-        list-style-type: none;
-        color: rgb(1, 6, 11);
-        margin: 20px;
-        font-family: "Comic Sans MS";
-        font-weight: bolder;
-        font-size: 17px;
-        background-color: rgb(252, 176, 233);
-        border-radius: 05px;
-        border-bottom: 03px solid rgba(230, 136, 152, 0.826);
-        display: inline;
-        }
-    }
-}
-
-.envio_nav a:hover {
-    color: rgb(123, 252, 252);
+    @extend%nav;
 }
 
 .envio_formulario {
     list-style-type: none;
-    color: rgb(1, 6, 11);
+    color: map-get($colores,colorNegro );
     margin: 20px;
-    font-family: "Comic Sans MS";
+    font-family: map-get($colores,letra );
     font-weight: bolder;
     font-size: 25px;
     text-align: center;
@@ -481,73 +355,36 @@ p {
 }
 
 .comunicacion_texto {
-    background-color: rgb(241, 71, 156);
+    background-color: map-get($colores,colorChicle );
     text-align: center;
-    border: 02px solid black;
-    font-family: "comic Sans MS";
+    border: 02px solid map-get($colores,colorNegro );
+    font-family:map-get($colores,letra );
 }
 
 .comunicacion_nav{ 
-    ul{
-     li {
-        list-style-type: none;
-        color: rgb(1, 6, 11);
-        margin: 20px;
-        font-family: "Comic Sans MS";
-        font-weight: bolder;
-        font-size: 17px;
-        background-color: rgb(252, 176, 233);
-        border-radius: 05px;
-        border-bottom: 03px solid rgba(230, 136, 152, 0.826);
-        display: inline;
-        }
-    }
-}
-
-.comunicacion_nav a:hover {
-    color: rgb(123, 252, 252);
+ @extend %nav;
 }
 
 .comunicacion_info {
     list-style-type: none;
     color: rgb(1, 6, 11);
     margin: 20px;
-    font-family: "Comic Sans MS";
+    font-family: map-get($colores,letra );
     font-weight: bolder;
     font-size: 30px;
     text-align: center;
 }
 
 .info_titulo {
-    background-color: rgb(241, 71, 156);
-    text-align: center;
-    border: 02px solid black;
-    font-family: "comic Sans MS";
+   @extend%titulos
 }
 
 .info_link{ 
-    ul{ 
-        li {
-        list-style-type: none;
-        color: rgb(1, 6, 11);
-        margin: 20px;
-        font-family: "Comic Sans MS";
-        font-weight: bolder;
-        font-size: 17px;
-        background-color: rgb(252, 176, 233);
-        border-radius: 05px;
-        border-bottom: 03px solid rgba(230, 136, 152, 0.826);
-        display: inline;
-        }
-    } 
-}
-
-.info_link a:hover {
-    color: rgb(123, 252, 252);
+    @extend%nav;
 }
 
 .aside_titulo {
-        font-family: "Comic Sans MS";
+        font-family:map-get($colores,letra);
         text-align: center;
         .aside {
                 width: 50%;
@@ -605,7 +442,7 @@ p {
     animation-name: titulo;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    font-family: "Comic Sans MS"
+    font-family:map-get($colores,letra )
 }
 
 @keyframes titulo {

@@ -1,0 +1,64 @@
+%grillaProductos{
+    display: grid;
+    row-gap: 15px;
+    grid-template-rows: 6, 9% 56% 10%;
+}
+%titulos{
+    background-color: rgb(241, 71, 156);
+        text-align: center;
+        border: 02px solid black;
+        font-family: "comic Sans MS";
+}
+%productosNav{
+    a:hover {
+            color: rgb(123, 252, 252);
+        }
+    
+        background-color: rgb(241, 138, 193);
+    
+        a {
+            text-decoration: none;
+        }
+    
+        ul {
+            li {
+                list-style-type: none;
+                color: rgb(1, 6, 11);
+                margin: 20px;
+                font-family: "Comic Sans MS";
+                font-weight: bolder;
+                font-size: 17px;
+                background-color: rgb(252, 176, 233);
+                border-radius: 05px;
+                border-bottom: 03px solid rgba(230, 136, 152, 0.826);
+            }
+    
+            li {
+                display: inline;
+            }
+        }
+}
+%seccionFotosProductos{
+    list-style-type: none;
+        color: rgb(1, 6, 11);
+        font-family: "Comic Sans MS";
+        font-weight: bolder;
+        font-size: 17px;
+}
+%nav{
+    a:hover {color: rgb(123, 252, 252);}
+    ul {
+     li {
+       list-style-type: none;
+        color: rgb(1, 6, 11);
+        margin: 20px;
+        font-family: "Comic Sans MS";
+        font-weight: bolder;
+        font-size: 17px;
+        background-color: rgb(252, 176, 233);
+        border-radius: 05px;
+         border-bottom: 03px solid rgba(230, 136, 152, 0.826);
+        display: inline;
+        }
+    }
+}

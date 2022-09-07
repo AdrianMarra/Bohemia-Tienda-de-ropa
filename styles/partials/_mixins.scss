@@ -1,0 +1,11 @@
+@mixin gridTemplatePro {
+    grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    
+}
+@mixin seccionProductosFotos {
+    background-color: $color;
+        text-align: center;
+        border: 02px solid $bordercolor;
+    
+}
