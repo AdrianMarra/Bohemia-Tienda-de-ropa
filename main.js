@@ -27,4 +27,30 @@ const sumar = (a, d) => a + d;
 const productoIva = x => x * valorProducto;
 let precioFinal = sumar(valorProducto, productoIva(valorProducto));
 console.log(precioFinal)
+//array objetos
+class indumentaria{
+    constructor(nombre, precio) {
+        this.nombre = nombre();
+        this.precio = parseFloat(precio);
+    }
+}
+const productosEnCarrito = [];    //productosEnCarrito va a tomar todos los productos que se agreguen en el mismo.
+productosEnCarrito.push(new indumentaria("calza", "1000"));
+productosEnCarrito.push(new indumentaria("remera", "600"));
+productosEnCarrito.push(new indumentaria("top", "500"));
+productosEnCarrito.push(new indumentaria("calza", "1000"));
+// promo de 2x1 calzas
+function promo2X1([productosEnCarrito],calza) { 
+    let cantidadDeCalzas = 0;
+    for (let i = 0; i < productosEnCarrito.length; i++) {
+        if (productosEnCarrito[i] == calza) {
+            cantidadDeCalzas = cantidadDeCalzas + 1;
+        }
+    }
+    if (cantidadDeCalzas = 2) {
+        alert('Usted tiene la promo de calzas de 2x1 . Muchas gracias por su compra!!!!')
+    } else {
+        alert('Su compra no tiene ninguna oferta, puede aprovechar de nuestras ojrtas de 2x1. gracias por su compra.')
+    }
+}
 
