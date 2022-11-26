@@ -53,4 +53,22 @@ function promo2X1([productosEnCarrito],calza) {
         alert('Su compra no tiene ninguna oferta, puede aprovechar de nuestras ojrtas de 2x1. gracias por su compra.')
     }
 }
+//guardat info de producto con JSON 
+const calza = { id: 001, produc: 'CalzaDeportivas' };
+const tops = { id: 002, produc: 'topsDeportivas' };
+const remeras = { id: 003, produc: 'remerasDeportivas' };
+const calzaJSON = JSON.stringify(calza);
+const topsJSON = JSON.stringify(tops);
+const remerasJSON = JSON.stringify(remeras);
+localStorage.setItem('calza', calzaJSON);
+localStorage.setItem('tops', topsJSON);
+localStorage.setItem('remeras', remerasJSON);
+//guardar en carrito de compras
+guardarLocal('listaCarrito', JSON, stringify(productosEnCarrito));
+
+for (const produc of productosEnCarrito) {
+    guardarLocal(produc.id, JSON.stringify(productosEnCarrito))
+}
+
+
 
