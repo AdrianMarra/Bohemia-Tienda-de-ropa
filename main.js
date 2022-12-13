@@ -69,6 +69,17 @@ guardarLocal('listaCarrito', JSON, stringify(productosEnCarrito));
 for (const produc of productosEnCarrito) {
     guardarLocal(produc.id, JSON.stringify(productosEnCarrito))
 }
+productosEnCarrito.length === 0 && console.log('el carrito no tiene ningun producto')
+//mostrar ptoductos del carrito
+let counter=0
+const contProducto = setInterval(() => {
+    counter++
+    console.log('counter:', counter)
+    if (counter >= length.productosEnCarrito) {
+        clearInterval(interval)
+        console.log('Esos son los productos seleccionados')
+    }
+},1000)
 
 
 
